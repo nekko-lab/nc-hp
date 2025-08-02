@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pagetitle from "../components/pagetitle.astro";
+import Historyitem from "../components/Historyitem.astro";
+---
+
+<Layout title="歴史 | NC -Nekko Cloud">
+  <Pagetitle title="歴史" />
+
+  <div class="max-w-2xl mx-auto p-8">
+    <Historyitem year={2025} month={7} content="夏休み満喫期間" />
+    <Historyitem year={2025} month={8} content="卒論忙殺月間" />
+  </div>
+</Layout>
