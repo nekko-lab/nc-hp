@@ -2,71 +2,77 @@
 import Layout from "../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import logo from "../assets/nekko_cloud.icon.png";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="NC - Network Computing">
   <!-- ヒーローセクション -->
   <section class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col lg:flex-row items-center gap-8">
-        <!-- 左側：ロゴエリア -->
-        <div class="w-full lg:w-1/2">
+    <div class="w-full px-8 2xl:px-24 mx-auto">
+      <div class="w-[90%] mx-auto">
+        <div class="w-full">
           <div
-            class="bg-white p-12 rounded-lg shadow-lg flex items-center gap-4"
+            class="bg-white p-12 rounded-lg shadow-lg flex flex-col lg:flex-row items-center gap-[50%]"
           >
-            <Image src={logo} alt="Nekko Cloud Logo" width="250" height="300" />
-            <p class="text-gray-600 font-bold ml-36 my-8 text-5xl">
-              みんなのアイデアを実現できる<br />プラットフォームを<br />提供する
+            <Image
+              src={logo}
+              alt="Nekko Cloud Logo"
+              width="250"
+              height="300"
+              class="flex-shrink-0"
+            />
+            <p
+              class="text-gray-600 font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center lg:text-left leading-tight"
+            >
+              みんなのアイデアを<br />実現できる<br />プラットフォームを<br
+              />提供する
             </p>
           </div>
         </div>
+      </div>
 
-        <!-- 右側：テキスト -->
-        <div class="w-full lg:w-1/2 text-center lg:text-center">
-          <h1
-            class="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight"
-          >
-          </h1>
-        </div>
+      <!-- 右側：テキスト -->
+      <div class="w-full lg:w-1/2 text-center lg:text-center">
+        <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
+        </h1>
       </div>
     </div>
   </section>
 
   <!-- NCとはセクション -->
   <section class="bg-teal-400 pb-32 pt-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-center text-black text-3xl font-bold mb-12">NCとは</h2>
+    <div class="w-full px-8 2xl:px-24 mx-auto">
+      <h2 class="text-center text-black text-3xl 2xl:text-5xl font-bold mb-12">
+        NCとは
+      </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
         <!-- カード1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg mb-3 text-gray-800">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
+          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
             Nekko Cloudを作る
           </h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
+          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
             運営・設計・構築・運用のすべてを行う
           </p>
         </div>
 
         <!-- カード2 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg mb-3 text-gray-800">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
+          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
             Nekko Cloudを利用する
           </h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
+          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
             Nekko Cloudを作るだけではなく、実際に利用する、<br />
             そうすることで，現状の課題を見つけて，次の開発につなげる．
           </p>
         </div>
 
         <!-- カード3 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg mb-3 text-gray-800">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
+          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
             Nekko Cloudを通じて知見・知識を収集し、発表する
           </h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
+          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
             本プロジェクトの知名度向上や，オープンソースへの貢献
           </p>
         </div>
@@ -76,18 +82,20 @@ import logo from "../assets/nekko_cloud.icon.png";
 
   <!-- Nekko Cloudテクノロジーセクション -->
   <section class="bg-teal-500 pb-32 pt-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-center text-black text-3xl font-bold mb-12">
+    <div class="w-full px-8 2xl:px-24 mx-auto">
+      <h2 class="text-center text-black text-3xl 2xl:text-5xl font-bold mb-12">
         Nekko Cloudテクノロジー
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
         <!-- HOGE 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
           <div class="flex">
             <div class="w-1/2">
-              <h3 class="font-bold text-lg mb-8 text-gray-800">Kubenetes</h3>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
+                Kubenetes
+              </h3>
+              <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
                 <li>コンテナオーケストレーション</li>
                 <li>Nekko Cloudの基盤技術を支える</li>
                 <li>詳細</li>
@@ -97,9 +105,11 @@ import logo from "../assets/nekko_cloud.icon.png";
         </div>
 
         <!-- HOGE 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg mb-8 text-gray-800">Proxmox</h3>
-          <ul class="text-sm text-gray-600 space-y-1">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
+          <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
+            Proxmox
+          </h3>
+          <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
             <li>VMなどを管理するOS</li>
             <li>仮想化技術でお役立ち</li>
             <li>詳細</li>
@@ -107,9 +117,11 @@ import logo from "../assets/nekko_cloud.icon.png";
         </div>
 
         <!-- HOGE 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg mb-8 text-gray-800">HOGE</h3>
-          <ul class="text-sm text-gray-600 space-y-1">
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
+          <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
+            HOGE
+          </h3>
+          <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
             <li>hogehoge</li>
             <li>hogehoge</li>
             <li>pon</li>
@@ -121,32 +133,43 @@ import logo from "../assets/nekko_cloud.icon.png";
 
   <!-- メディアセクション -->
   <section class="bg-teal-600 pb-32 pt-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-center text-black text-3xl font-bold mb-12">メディア</h2>
+    <div class="w-full px-8 2xl:px-24 mx-auto">
+      <h2 class="text-center text-black text-3xl 2xl:text-5xl font-bold mb-12">
+        メディア
+      </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
         <!-- Twitter カード1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
-          <p class="text-sm text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1">X</p>
-          <p class="text-sm text-gray-500">@nekko_lab</p>
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
+          <div
+            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
+          >
+          </div>
+          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
+          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">X</p>
+          <p class="text-sm 2xl:text-lg text-gray-500">@nekko_lab</p>
         </div>
 
         <!-- Twitter カード2 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
-          <p class="text-sm text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1">Qiita</p>
-          <p class="text-sm text-gray-500">@いるまる</p>
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
+          <div
+            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
+          >
+          </div>
+          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
+          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">Qiita</p>
+          <p class="text-sm 2xl:text-lg text-gray-500">@いるまる</p>
         </div>
 
         <!-- Twitter カード3 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
-          <p class="text-sm text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1">Instagram</p>
-          <p class="text-sm text-gray-500">@ねっこ</p>
+        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
+          <div
+            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
+          >
+          </div>
+          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
+          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">Instagram</p>
+          <p class="text-sm 2xl:text-lg text-gray-500">@ねっこ</p>
         </div>
       </div>
     </div>

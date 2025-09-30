@@ -5,8 +5,9 @@ export interface Props {
   position: string;
   role: string;
   snsLinks: { platform: string; url: string; username: string }[];
+  comment: string;
 }
-const { imageUrl, person, position, role, snsLinks } = Astro.props;
+const { imageUrl, person, position, role, snsLinks, comment } = Astro.props;
 ---
 
 <div class="bg-gray-200 p-8 shadow-lg mt-6">
@@ -26,6 +27,7 @@ const { imageUrl, person, position, role, snsLinks } = Astro.props;
           ))
         }
       </p>
+      <p class="text-black-600 my-10">{comment}</p>
     </div>
     <div
       class="w-64 h-64 bg-green-100 rounded-full flex items-center justify-center order-1 lg:order-2 overflow-hidden"
