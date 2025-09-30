@@ -1,74 +1,52 @@
 ---
-import Pagetitle from "../components/pagetitle.astro";
+import Whitemember from "../components/item/whitemember.astro";
+import Graymember from "../components/item/graymember.astro";
+import Pagetitle from "../components/page/pagetitle.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="メンバー" | NC - Nekko Cloud>
+<Layout title="メンバー | NC - Nekko Cloud">
   <Pagetitle title="メンバー" />
-
   <section class="py-16 min-h-screen">
     <div class="max-w-6xl mx-auto px-4 space-y-16">
-      <!--白カード -->
-      <div class="p-8 shadow-lg mt-6">
-        <div class="flex flex-col lg:flex-row items-center p-16">
-          <div
-            class="w-64 h-64 bg-green-100 rounded-full flex items-center justify-center"
-          >
-            アイコン
-          </div>
-          <div class="flex-1 text-center lg:text-right">
-            <h3 class="text-2xl font-bold mb-2">名前:わし(53歳)</h3>
-            <p class="text-gray-600 mb-1">役職:ぶちょう</p>
-            <p class="text-gray-600 mb-4">
-              担当:フロントエンド・バックエンド・インフラ・森羅万象担当大臣
-            </p>
-            <p class="text-gray-600">
-              SNS名<br />X:@Erica_kangeki<br />instagram:misoparco<br
-              />GitHub:miranop
-            </p>
-          </div>
-        </div>
-        <!--灰色カード -->
-        <div class="bg-gray-200 p-8 shadow-lg mt-6">
-          <div class="flex flex-col lg:flex-row items-center p-16">
-            <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
-              <h3 class="text-2xl font-bold mb-2">名前:ゆうさく(29歳)</h3>
-              <p class="text-gray-700 mb-1">役職:メンバー</p>
-              <p class="text-gray-700 mb-4">
-                担当:バックエンド・データベース設計 注意喚起担当
-              </p>
-              <p class="text-gray-700">
-                SNS名<br />X:@taro_dev<br />GitHub:taro123
-              </p>
-            </div>
-            <div
-              class="w-64 h-64 bg-green-100 rounded-full flex items-center justify-center order-1 lg:order-2"
-            >
-              アイコン
-            </div>
-          </div>
-        </div>
+      <Whitemember
+        imageUrl=""
+        person="名前:わし(53歳)"
+        position="役職:ぶちょう"
+        role="フロントエンド・バックエンド・インフラ・森羅万象担当大臣"
+        snsLinks={[
+          {
+            platform: "X",
+            url: "https://x.com/Erica_kangeki",
+            username: "@Erica_kangeki",
+          },
+          { platform: "instagram", url: "", username: "misoparco" },
+          { platform: "GitHub", url: "", username: "miranop" },
+        ]}
+      />
 
-        <!--白カード -->
-        <div class="p-8 shadow-lg mt-6">
-          <div class="flex flex-col lg:flex-row items-center p-16">
-            <div
-              class="w-64 h-64 bg-green-100 rounded-full flex items-center justify-center"
-            >
-              アイコン
-            </div>
-            <div class="flex-1 text-center lg:text-right">
-              <h3 class="text-2xl font-bold mb-2">名前:田所浩二(24歳)</h3>
-              <p class="text-gray-600 mb-1">役職:ぶちょう</p>
-              <p class="text-gray-600 mb-4">担当:広報,東京リージョン担当</p>
-              <p class="text-gray-600">
-                SNS名<br />X:@beast_yaju<br />instagram:tonosky<br
-                />GitHub:korotado
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Graymember
+        imageUrl=""
+        person="名前:ゆうさく(29歳)"
+        position="役職:メンバー"
+        role="バックエンド・データベース設計 注意喚起担当"
+        snsLinks={[
+          { platform: "X", url: "", username: "@taro_dev" },
+          { platform: "GitHub", url: "", username: "taro123" },
+        ]}
+      />
+
+      <Whitemember
+        imageUrl=""
+        person="名前:田所浩二(24歳)"
+        position="役職:ぶちょう"
+        role="広報,東京リージョン担当"
+        snsLinks={[
+          { platform: "X", url: "", username: "@beast_yaju" },
+          { platform: "instagram", url: "", username: "tonosky" },
+          { platform: "GitHub", url: "", username: "korotado" },
+        ]}
+      />
     </div>
   </section>
 </Layout>

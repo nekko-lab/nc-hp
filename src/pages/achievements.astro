@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Pagetitle from "../components/pagetitle.astro";
+import Pagetitle from "../components/page/pagetitle.astro";
+import Achivecard from "../components/item/achivecard.astro";
 ---
 
 <Layout title="実績" | NC - Nekko Cloud>
@@ -10,78 +11,20 @@ import Pagetitle from "../components/pagetitle.astro";
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- 実績カード -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-        >
-          <div class="h-48 bg-gray-200"></div>
-          <!-- 画像エリア -->
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Shukko</h3>
-            <p class="text-gray-600 mb-4">千葉工業大学サークル掲示板サイト</p>
-            <div class="flex flex-wrap gap-2 mb-4"></div>
-            <p class="text-sm text-gray-500">2025年4月</p>
-            <a
-              href="https://shukko.nekko-lab.dev/"
-              class="font-bold text-blue-600 hover:text-blue-800 text-sm hover:underline mt-8 items-end"
-              >詳細⇒</a
-            >
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-        >
-          <div class="h-48 bg-gray-200"></div>
-          <!-- 画像エリア -->
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">超Mikus Origin</h3>
-            <p class="text-gray-600 mb-4">
-              ニコニコ超会議クリエイターズクロスでの出店
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4"></div>
-            <p class="text-sm text-gray-500">2024年4月</p>
-            <a
-              href="https://chokaigi.jp/2024/creatorcross/0145"
-              class="font-bold text-blue-600 hover:text-blue-800 text-sm hover:underline mt-8 items-end"
-              >詳細⇒</a
-            >
-          </div>
-        </div>
-        <!-- 実績カード -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-        >
-          <div class="h-48 bg-gray-200"></div>
-          <!-- 画像エリア -->
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Shukko</h3>
-            <p class="text-gray-600 mb-4">千葉工業大学サークル掲示板サイト</p>
-            <div class="flex flex-wrap gap-2 mb-4"></div>
-            <p class="text-sm text-gray-500">2025年4月</p>
-            <a
-              href="https://shukko.nekko-lab.dev/"
-              class="font-bold text-blue-600 hover:text-blue-800 text-sm hover:underline mt-8 items-end"
-              >詳細⇒</a
-            >
-          </div>
-        </div>
-        <!-- 実績カード -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-        >
-          <div class="h-48 bg-gray-200"></div>
-          <!-- 画像エリア -->
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Shukko</h3>
-            <p class="text-gray-600 mb-4">千葉工業大学サークル掲示板サイト</p>
-            <div class="flex flex-wrap gap-2 mb-4"></div>
-            <p class="text-sm text-gray-500">2025年4月</p>
-            <a
-              href="https://shukko.nekko-lab.dev/"
-              class="font-bold text-blue-600 hover:text-blue-800 text-sm hover:underline mt-8 items-end"
-              >詳細⇒</a
-            >
-          </div>
-        </div>
+        <Achivecard
+          imageUrl="../../assets/nekko_cloud.logo-1.png"
+          title="Nekko Cloud ロゴ完成"
+          description="Nekko Cloudのロゴが完成しました。"
+          date="2024年6月"
+          link="https://nekko-cloud.com/posts/first-logo/"
+        />
+        <Achivecard
+          imageUrl="../../assets/nekko_cloud.logo-1.png"
+          title="Nekko Cloud ロゴ完成"
+          description="Nekko Cloudのロゴが完成しました。"
+          date="2024年6月"
+          link="https://nekko-cloud.com/posts/first-logo/"
+        />
       </div>
     </div>
   </section>

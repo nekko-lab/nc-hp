@@ -1,6 +1,8 @@
 ---
 // Navigation.astro
+import { Image } from "astro:assets";
 const currentPath = Astro.url.pathname;
+import namelogo from "../../assets/nekko_cloud.logo-1.png";
 ---
 
 <nav class="bg-teal-200 shadow-lg">
@@ -9,7 +11,7 @@ const currentPath = Astro.url.pathname;
       <!-- ロゴ/サークル名 -->
       <div class="flex items-center">
         <a href="/" class="text-xl font-bold text-gray-800">
-          NCロゴが入ります
+          <Image src={namelogo} alt="Nekko Cloud Logo" class="h-10 w-auto" />
         </a>
       </div>
 
