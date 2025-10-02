@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import logo from "../assets/nekko_cloud.icon.png";
+import Informationcard from "../components/item/informationcard.astro";
+import Mediacard from "../components/item/mediacard.astro";
 ---
 
 <Layout title="NC - Network Computing">
@@ -44,38 +46,19 @@ import logo from "../assets/nekko_cloud.icon.png";
       <h2 class="text-center text-black text-3xl 2xl:text-5xl font-bold mb-12">
         NCとは
       </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
-        <!-- カード1 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
-            Nekko Cloudを作る
-          </h3>
-          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
-            運営・設計・構築・運用のすべてを行う
-          </p>
-        </div>
-
-        <!-- カード2 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
-            Nekko Cloudを利用する
-          </h3>
-          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
-            Nekko Cloudを作るだけではなく、実際に利用する、<br />
-            そうすることで，現状の課題を見つけて，次の開発につなげる．
-          </p>
-        </div>
-
-        <!-- カード3 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg 2xl:text-2xl mb-3 text-gray-800">
-            Nekko Cloudを通じて知見・知識を収集し、発表する
-          </h3>
-          <p class="text-sm 2xl:text-lg text-gray-600 leading-relaxed">
-            本プロジェクトの知名度向上や，オープンソースへの貢献
-          </p>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Informationcard
+          title="Nekko Cloudを作る"
+          description="構想・設計・開発・運用のすべてを行う"
+        />
+        <Informationcard
+          title="Nekko Cloudを利用する"
+          description="Nekko Cloudを作るだけでなく、<br />実際に利用することで、<br/>現状の課題を見つけて次の開発につなげる"
+        />
+        <Informationcard
+          title="Nekko Cloudを通して得た知見や成果物を発信・共有する"
+          description="本プロジェクトの知名度向上や、オープンソースへの貢献"
+        />
       </div>
     </div>
   </section>
@@ -84,49 +67,14 @@ import logo from "../assets/nekko_cloud.icon.png";
   <section class="bg-teal-500 pb-32 pt-8">
     <div class="w-full px-8 2xl:px-24 mx-auto">
       <h2 class="text-center text-black text-3xl 2xl:text-5xl font-bold mb-12">
-        Nekko Cloudテクノロジー
+        Nekko Cloudで使用中の技術
       </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
-        <!-- HOGE 1 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <div class="flex">
-            <div class="w-1/2">
-              <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
-                Kubenetes
-              </h3>
-              <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
-                <li>コンテナオーケストレーション</li>
-                <li>Nekko Cloudの基盤技術を支える</li>
-                <li>詳細</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- HOGE 2 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
-            Proxmox
-          </h3>
-          <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
-            <li>VMなどを管理するOS</li>
-            <li>仮想化技術でお役立ち</li>
-            <li>詳細</li>
-          </ul>
-        </div>
-
-        <!-- HOGE 3 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg 2xl:text-2xl mb-8 text-gray-800">
-            HOGE
-          </h3>
-          <ul class="text-sm 2xl:text-lg text-gray-600 space-y-1">
-            <li>hogehoge</li>
-            <li>hogehoge</li>
-            <li>pon</li>
-          </ul>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Informationcard
+          title="kubenetes"
+          description="コンテナオーケストレーション"
+        />
+        <Informationcard title="Proxmox VE" description="VM乱立できるOS" />
       </div>
     </div>
   </section>
@@ -140,37 +88,22 @@ import logo from "../assets/nekko_cloud.icon.png";
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
         <!-- Twitter カード1 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
-          <div
-            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
-          >
-          </div>
-          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">X</p>
-          <p class="text-sm 2xl:text-lg text-gray-500">@nekko_lab</p>
-        </div>
+        <Mediacard
+          imageUrl="/ネッコ研ロゴ.png"
+          title="X"
+          link="https://x.com/nekko_lab"
+        />
+        <Mediacard
+          imageUrl="ネッコ研ロゴ.png"
+          title="qiita"
+          link="https://qiita.com/organizations/nekko_lab"
+        />
 
-        <!-- Twitter カード2 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
-          <div
-            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
-          >
-          </div>
-          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">Qiita</p>
-          <p class="text-sm 2xl:text-lg text-gray-500">@いるまる</p>
-        </div>
-
-        <!-- Twitter カード3 -->
-        <div class="bg-white p-6 2xl:p-10 rounded-lg shadow-lg text-center">
-          <div
-            class="w-16 h-16 2xl:w-24 2xl:h-24 bg-gray-200 rounded-full mx-auto mb-4"
-          >
-          </div>
-          <p class="text-sm 2xl:text-lg text-gray-600 mb-2">アイコン</p>
-          <p class="font-semibold text-gray-800 mb-1 2xl:text-xl">Instagram</p>
-          <p class="text-sm 2xl:text-lg text-gray-500">@ねっこ</p>
-        </div>
+        <Mediacard
+          imageUrl="ネッコ研ロゴ.png"
+          title="Github"
+          link="https://github.com/nekko-lab/nc-recruit"
+        />
       </div>
     </div>
   </section>
