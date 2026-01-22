@@ -1,8 +1,8 @@
 ---
-import Whitemember from "../components/item/whitemember.astro";
-import Graymember from "../components/item/graymember.astro";
-import Pagetitle from "../components/page/pagetitle.astro";
-import Layout from "../layouts/Layout.astro";
+import Whitemember from '../components/item/WhiteMember.astro';
+import Graymember from '../components/item/GrayMember.astro';
+import Pagetitle from '../components/page/pagetitle.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="メンバー | NC - Nekko Cloud">
@@ -10,77 +10,87 @@ import Layout from "../layouts/Layout.astro";
   <section class="py-16 min-h-screen">
     <div class="w-full px-8 2xl:px-24 mx-auto space-y-16">
       <Whitemember
-        imageUrl="/v99FrOjF_400x400 - 関根弘晃.jpg"
+        imageUrl="/member1.jpg"
         person="みらのん"
         position="役職:ネットワークコンテンツ研究会部長"
         role="PM,フロントエンド サービス開発"
         snsLinks={[
           {
-            platform: "X",
-            url: "",
-            username: "@Erica_kangeki",
+            platform: 'X',
+            url: 'https://x.com/Erica_kangeki',
+            username: '@Erica_kangeki',
           },
-          { platform: "instagram", url: "", username: "misoparco" },
-          { platform: "GitHub", url: "", username: "miranop" },
+          {
+            platform: 'instagram',
+            url: '',
+            username: 'misoparco',
+          },
+          { platform: 'GitHub', url: '', username: 'miranop' },
         ]}
         comment="毎日頑張ります"
       />
 
       <Graymember
-        imageUrl="/IMG_0499 - 井上裕介.png"
+        imageUrl="/member2.png"
         person="Cyokozai"
         position="役職:NCチームプロダクトオーナー"
         role="PM,インフラ,サービス開発"
-        snsLinks={[{ platform: "X", url: "", username: "@cyokozai0" }]}
+        snsLinks={[
+          {
+            platform: 'X',
+            url: '',
+            username: '@cyokozai0',
+          },
+        ]}
         comment="Infrastructure as a Smile"
       />
 
       <Whitemember
-        imageUrl="/IMG_3796 (2) - 脇田一秀.jpg"
+        imageUrl="/member3.jpg"
         person="ワッキー"
         position="役職:NCチーム開発メンバー"
         role="データサイエンス,盛り上げ"
         snsLinks={[
-          { platform: "X", url: "", username: "@wakki_0123" },
-          { platform: "instagram", url: "", username: "wakki0123" },
-          { platform: "GitHub", url: "", username: "wakki-0123" },
+          { platform: 'X', url: '', username: '@wakki_0123' },
+          { platform: 'instagram', url: '', username: 'wakki0123' },
+          { platform: 'GitHub', url: '', username: 'wakki-0123' },
         ]}
         comment="視認性がとてもよい大柄な人です 人間の身体と精神に少し詳しいです"
       />
       <Graymember
-        imageUrl="/bkn6xd - 萩原千陽.jpg"
+        imageUrl="/member6.jpg"
         person="chiharu"
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
         snsLinks={[
-          { platform: "X", url: "", username: "@chiharu_meow" },
-          { platform: "instagram", url: "", username: "chiharu_meow" },
-          { platform: "GitHub", url: "", username: "Chiharu-Hagihara" },
+          { platform: 'X', url: '', username: '@chiharu_meow' },
+          { platform: 'instagram', url: '', username: 'chiharu_meow' },
+          { platform: 'GitHub', url: '', username: 'Chiharu-Hagihara' },
         ]}
         comment="お酒を作るのと食べることが好きです"
       />
       <Whitemember
-        imageUrl="/IMG_0578 - 石川壱茶.png"
+        imageUrl="/member4.png"
         person="あいあい"
         position="役職:NCチーム開発メンバー"
         role="調査、サービス開発etc"
-        snsLinks={[{ platform: "X", url: "", username: "@14kw13" }]}
+        snsLinks={[{ platform: 'X', url: '', username: '@14kw13' }]}
         comment="怠惰を燃料に"
       />
       <Graymember
-        imageUrl="/IMG_00013 - 錦織蒼.jpeg"
+        imageUrl="/member5.jpg"
         person="たかお"
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
-        snsLinks={[{ platform: "X", url: "", username: "@ao_u__u" }]}
+        snsLinks={[{ platform: 'X', url: '', username: '@ao_u__u' }]}
         comment="Proxmoxだいすき"
       />
       <Whitemember
-        imageUrl="-gcho2f.jpg"
+        imageUrl="/member7.jpg"
         person="すみ"
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
-        snsLinks={[{ platform: "X", url: "", username: "@su3yka4a_" }]}
+        snsLinks={[{ platform: 'X', url: '', username: '@su3yka4a_' }]}
         comment="蟻の思いも天に届く"
         other="TypeScriptこそ至高。"
       />

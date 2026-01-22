@@ -34,7 +34,10 @@ const { imageUrl, person, position, role, snsLinks, comment, other } =
         {
           snsLinks.map((link) => (
             <span>
-              {link.platform}:{link.username}
+              {link.platform}:
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.username}
+              </a>
               <br />
             </span>
           ))

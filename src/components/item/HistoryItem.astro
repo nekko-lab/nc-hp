@@ -1,7 +1,7 @@
 ---
 export interface Props {
   year: number;
-  month?: string;
+  month: number;
   content: string;
 }
 const { year, month, content } = Astro.props;
@@ -22,6 +22,6 @@ const { year, month, content } = Astro.props;
   <!-- コンテンツ部分 -->
   <div class="pt-0.5">
     <h3 class="text-2xl font-bold text-black-800 mb-1">{year}</h3>
-    <p class="text-black-600 text-bold">{month} {content}</p>
+    <p class="text-black-600 text-bold">{month}月{content}</p>
   </div>
 </div>

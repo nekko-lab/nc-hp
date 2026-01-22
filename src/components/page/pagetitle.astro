@@ -4,7 +4,7 @@ export interface Props {
   title: string;
   bgcolor?: string;
 }
-const { title, bgcolor = "bg-gray-100" } = Astro.props;
+const { title, bgcolor = 'bg-gray-100' } = Astro.props;
 ---
 
 <section class={`py-16 ${bgcolor}`}>

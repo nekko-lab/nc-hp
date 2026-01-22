@@ -1,10 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Pagetitle from "../components/page/pagetitle.astro";
-import Achivecard from "../components/item/achivecard.astro";
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/page/pagetitle.astro';
+import Achivecard from '../components/item/AchieveCard.astro';
+import nekko from '/public/nekko-logo.png';
 ---
 
-<Layout title="実績" | NC - Nekko Cloud>
+<Layout title="実績 | NC - Nekko Cloud">
   <Pagetitle title="実績" />
 
   <section class="py-16 bg-white">
@@ -12,18 +13,18 @@ import Achivecard from "../components/item/achivecard.astro";
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- 実績カード -->
       <Achivecard
-        imageUrl="ネッコ研ロゴ.png"
+        imageUrl={nekko}
         title="Nekko Cloud V1"
         description="v1 IPIP6トンネル on NGNを使用したVPN上に構築 "
       />
       <Achivecard
-        imageUrl="ネッコ研ロゴ.png"
+        imageUrl={nekko}
         title="Nekko Cloud v2 "
         description="Wireguardトンネル on NGNを使用したVPN上に構築 "
         link="https://github.com/nekko-lab/vyos/tree/main/patchs/wireguard"
       />
       <Achivecard
-        imageUrl="ネッコ研ロゴ.png"
+        imageUrl={nekko}
         title="Nekko Cloud "
         description="現段階での開発情報"
         link="https://docs.google.com/presentation/d/1W5hpbMDYs2SNt6Cc1Piby1DEGY7uFLPvCD7U8ZMIDcY/edit?slide=id.p#slide=id.p"

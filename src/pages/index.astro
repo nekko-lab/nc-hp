@@ -1,9 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
-import logo from "../assets/nekko_cloud.icon.png";
-import Informationcard from "../components/item/informationcard.astro";
-import Mediacard from "../components/item/mediacard.astro";
+import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import logo from '../assets/nekko_cloud.icon.png';
+import Informationcard from '../components/item/InformationCard.astro';
+import Mediacard from '../components/item/MediaCard.astro';
+import nekko from '/public/nekko-logo.png';
 ---
 
 <Layout title="NC - Network Computing">
@@ -88,19 +89,15 @@ import Mediacard from "../components/item/mediacard.astro";
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 2xl:gap-12">
         <!-- Twitter カード1 -->
+        <Mediacard imageUrl={nekko} title="X" link="https://x.com/nekko_lab" />
         <Mediacard
-          imageUrl="/ネッコ研ロゴ.png"
-          title="X"
-          link="https://x.com/nekko_lab"
-        />
-        <Mediacard
-          imageUrl="ネッコ研ロゴ.png"
+          imageUrl={nekko}
           title="qiita"
           link="https://qiita.com/organizations/nekko_lab"
         />
 
         <Mediacard
-          imageUrl="ネッコ研ロゴ.png"
+          imageUrl={nekko}
           title="Github"
           link="https://github.com/nekko-lab/nc-recruit"
         />
