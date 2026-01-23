@@ -1,16 +1,39 @@
 import eslintPluginAstro from 'eslint-plugin-astro';
+import * as astroParser from 'astro-eslint-parser';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
-  ...eslintPluginAstro.configs.recommended,
   {
+    files: ['**/*.astro'],
+    languageOptions: {
+      parser: astroParser,
+      parserOptions: {
+        parser: tsParser,
+        extraFileExtensions: ['.astro'],
+      },
+    },
+    plugins: {
+      astro: eslintPluginAstro,
+    },
     rules: {
-      // 基本ルール
+      // Astro推奨ルール
+      ...eslintPluginAstro.configs.recommended.rules,
+    },
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+    rules: {
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
       eqeqeq: ['error', 'always'],
-
-      // 未使用変数の警告
       'no-unused-vars': [
         'warn',
         {

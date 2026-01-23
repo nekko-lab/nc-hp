@@ -3,6 +3,9 @@ import Whitemember from '../components/item/WhiteMember.astro';
 import Graymember from '../components/item/GrayMember.astro';
 import Pagetitle from '../components/page/pagetitle.astro';
 import Layout from '../layouts/Layout.astro';
+
+const X_URL = 'https://x.com';
+const GITHUB_URL = 'https://github.com';
 ---
 
 <Layout title="メンバー | NC - Nekko Cloud">
@@ -17,15 +20,14 @@ import Layout from '../layouts/Layout.astro';
         snsLinks={[
           {
             platform: 'X',
-            url: 'https://x.com/Erica_kangeki',
+            url: X_URL + '/Erica_kangeki',
             username: '@Erica_kangeki',
           },
           {
-            platform: 'instagram',
-            url: '',
-            username: 'misoparco',
+            platform: 'GitHub',
+            url: GITHUB_URL + '/miranop',
+            username: 'miranop',
           },
-          { platform: 'GitHub', url: '', username: 'miranop' },
         ]}
         comment="毎日頑張ります"
       />
@@ -38,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
         snsLinks={[
           {
             platform: 'X',
-            url: '',
+            url: X_URL + '/cyokozai0',
             username: '@cyokozai0',
           },
         ]}
@@ -51,9 +53,16 @@ import Layout from '../layouts/Layout.astro';
         position="役職:NCチーム開発メンバー"
         role="データサイエンス,盛り上げ"
         snsLinks={[
-          { platform: 'X', url: '', username: '@wakki_0123' },
-          { platform: 'instagram', url: '', username: 'wakki0123' },
-          { platform: 'GitHub', url: '', username: 'wakki-0123' },
+          {
+            platform: 'X',
+            url: X_URL + '/wakki_0123',
+            username: '@wakki_0123',
+          },
+          {
+            platform: 'GitHub',
+            url: GITHUB_URL + '/wakki-0123',
+            username: 'wakki-0123',
+          },
         ]}
         comment="視認性がとてもよい大柄な人です 人間の身体と精神に少し詳しいです"
       />
@@ -63,9 +72,16 @@ import Layout from '../layouts/Layout.astro';
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
         snsLinks={[
-          { platform: 'X', url: '', username: '@chiharu_meow' },
-          { platform: 'instagram', url: '', username: 'chiharu_meow' },
-          { platform: 'GitHub', url: '', username: 'Chiharu-Hagihara' },
+          {
+            platform: 'X',
+            url: X_URL + '/chiharu_meow',
+            username: '@chiharu_meow',
+          },
+          {
+            platform: 'GitHub',
+            url: GITHUB_URL + '/Chiharu-Hagihara',
+            username: 'Chiharu-Hagihara',
+          },
         ]}
         comment="お酒を作るのと食べることが好きです"
       />
@@ -74,7 +90,9 @@ import Layout from '../layouts/Layout.astro';
         person="あいあい"
         position="役職:NCチーム開発メンバー"
         role="調査、サービス開発etc"
-        snsLinks={[{ platform: 'X', url: '', username: '@14kw13' }]}
+        snsLinks={[
+          { platform: 'X', url: X_URL + '/@14kw13', username: '@14kw13' },
+        ]}
         comment="怠惰を燃料に"
       />
       <Graymember
@@ -82,7 +100,9 @@ import Layout from '../layouts/Layout.astro';
         person="たかお"
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
-        snsLinks={[{ platform: 'X', url: '', username: '@ao_u__u' }]}
+        snsLinks={[
+          { platform: 'X', url: X_URL + '/@ao_u__u', username: '@ao_u__u' },
+        ]}
         comment="Proxmoxだいすき"
       />
       <Whitemember
@@ -90,7 +110,9 @@ import Layout from '../layouts/Layout.astro';
         person="すみ"
         position="役職:NCチーム開発メンバー"
         role="サービス開発"
-        snsLinks={[{ platform: 'X', url: '', username: '@su3yka4a_' }]}
+        snsLinks={[
+          { platform: 'X', url: X_URL + '/@su3yka4a_', username: '@su3yka4a_' },
+        ]}
         comment="蟻の思いも天に届く"
         other="TypeScriptこそ至高。"
       />
