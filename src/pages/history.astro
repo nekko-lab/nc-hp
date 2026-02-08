@@ -2,31 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Pagetitle from '../components/page/pagetitle.astro';
 import Historyitem from '../components/item/HistoryItem.astro';
+import { historyItems } from '../data/history';
 ---
 
 <Layout title="歴史 | NC -Nekko Cloud">
   <Pagetitle title="歴史" />
-
   <div class="max-w-2xl mx-auto p-8">
-    <Historyitem
-      year={2019}
-      month={4}
-      content="初音ミクのファンメイドライブを制作するサークル、Miku's Origin(ミクオリ)を創設"
-    />
-    <Historyitem
-      year={2022}
-      month={4}
-      content="活動内容を3D系エンタメ系全般に拡充し、サークル名をネットワークコンテンツ研究会(ネッコ研)に改名"
-    />
-    <Historyitem
-      year={2023}
-      month={4}
-      content="活動内容にネットワーク・インフラ・クラウド系開発を拡充し、このチームをNetwork Infrastructure Team(NI)とする"
-    />
-    <Historyitem
-      year={2024}
-      month={4}
-      content="NIの主な活動内容が、ネットワークコンテンツ研究会のプライベートクラウド開発となったため、このクラウドをNekko Cloud(NC)、開発チーム名をNekko Cloud Teamとする。"
-    />
+    {
+      historyItems.map((item) => (
+        <Historyitem
+          year={item.year}
+          month={item.month}
+          content={item.content}
+        />
+      ))
+    }
   </div>
 </Layout>
