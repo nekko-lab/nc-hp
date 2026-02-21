@@ -1,0 +1,14 @@
+---
+//ページのタイトルを使うためのやつ
+export interface Props {
+  title: string;
+  bgcolor?: string;
+}
+const { title, bgcolor = 'bg-gray-100' } = Astro.props;
+---
+
+<section class={`py-16 ${bgcolor}`}>
+  <div class="w-full px-8 2xl:px-24 mx-auto mt-4 text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">{title}</h1>
+  </div>
+</section>
