@@ -140,4 +140,19 @@ export const members: Member[] = [
         comment: '蟻の思いも天に届く',
         other: 'TypeScriptこそ至高。',
     },
+    {
+        variant: 'gray',
+        imageUrl: '/member8.jpg',
+        person: 'くろな',
+        position: '役職:NCチーム開発メンバー',
+        role: 'サービス開発',
+        snsLinks: [
+            {
+                platform: 'X',
+                url: `${X_URL}/meltmanic`,
+                username: '@meltmanic',
+            },
+        ],
+        comment: '寝ると育つよ',
+    },
 ];
