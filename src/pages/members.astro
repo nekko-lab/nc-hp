@@ -1,32 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MemberCard from '../components/item/MemberCard.astro';
 import Pagetitle from '../components/page/pagetitle.astro';
-import WhiteMember from '../components/item/WhiteMember.astro';
-import GrayMember from '../components/item/GrayMember.astro';
-import {members} from '../data/members';       
+import Layout from '../layouts/Layout.astro';
+import {members} from '../data/members'; 
+
 ---
 
 <Layout title="メンバー | NC - Nekko Cloud">
   <Pagetitle title="メンバー" />
   <section class="py-16 min-h-screen">
     <div class="w-full px-8 2xl:px-24 mx-auto space-y-16">
-      {
-        members.map((member) => {
-          const MemberComponent =
-            member.variant === 'white' ? WhiteMember : GrayMember;
-          return (
-            <MemberComponent
-              imageUrl={member.imageUrl}
-              person={member.person}
-              position={member.position}
-              role={member.role}
-              snsLinks={member.snsLinks}
-              comment={member.comment}
-              other={member.other}
-            />
-          );
-        })
-      }
+      {members.map((member, index) => <MemberCard {...member} index={index} />)}
     </div>
   </section>
 </Layout>

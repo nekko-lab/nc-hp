@@ -5,7 +5,6 @@ export interface SNSLink {
 }
 
 export interface Member {
-    variant: 'white' | 'gray';
     imageUrl: string;
     person: string;
     position: string;
@@ -20,7 +19,6 @@ const GITHUB_URL = 'https://github.com';
 
 export const members: Member[] = [
     {
-        variant: 'white',
         imageUrl: '/member1.jpg',
         person: 'みらのん',
         position: '役職:ネットワークコンテンツ研究会部長',
@@ -40,7 +38,6 @@ export const members: Member[] = [
         comment: '毎日頑張ります',
     },
     {
-        variant: 'gray',
         imageUrl: '/member2.png',
         person: 'Cyokozai',
         position: '役職:NCチームプロダクトオーナー',
@@ -55,7 +52,6 @@ export const members: Member[] = [
         comment: 'Infrastructure as a Smile',
     },
     {
-        variant: 'white',
         imageUrl: '/member3.jpg',
         person: 'ワッキー',
         position: '役職:NCチーム開発メンバー',
@@ -75,7 +71,6 @@ export const members: Member[] = [
         comment: '視認性がとてもよい大柄な人です 人間の身体と精神に少し詳しいです',
     },
     {
-        variant: 'gray',
         imageUrl: '/member6.jpg',
         person: 'chiharu',
         position: '役職:NCチーム開発メンバー',
@@ -95,7 +90,6 @@ export const members: Member[] = [
         comment: 'お酒を作るのと食べることが好きです',
     },
     {
-        variant: 'white',
         imageUrl: '/member4.png',
         person: 'あいあい',
         position: '役職:NCチーム開発メンバー',
@@ -110,7 +104,6 @@ export const members: Member[] = [
         comment: '怠惰を燃料に',
     },
     {
-        variant: 'gray',
         imageUrl: '/member5.jpg',
         person: 'たかお',
         position: '役職:NCチーム開発メンバー',
@@ -125,7 +118,6 @@ export const members: Member[] = [
         comment: 'Proxmoxだいすき',
     },
     {
-        variant: 'white',
         imageUrl: '/member7.jpg',
         person: 'すみ',
         position: '役職:NCチーム開発メンバー',
@@ -141,7 +133,6 @@ export const members: Member[] = [
         other: 'TypeScriptこそ至高。',
     },
     {
-        variant: 'gray',
         imageUrl: '/member8.jpg',
         person: 'くろな',
         position: '役職:NCチーム開発メンバー',

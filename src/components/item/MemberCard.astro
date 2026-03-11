@@ -7,15 +7,18 @@ export interface Props {
   snsLinks: { platform: string; url: string; username: string }[];
   comment: string;
   other?: string;
+  index: number;
 }
-const { imageUrl, person, position, role, snsLinks, comment, other } =
+const { imageUrl, person, position, role, snsLinks, comment, other, index } =
   Astro.props;
+
+const isEven = index % 2 === 0;
 ---
 
-<div class="p-8 shadow-lg mt-6">
+<div class={`p-8 shadow-lg mt-6 ${isEven ? '' : 'bg-gray-200'}`}>
   <div class="flex flex-col lg:flex-row items-center p-16">
     <div
-      class="w-64 h-64 bg-green-100 rounded-full flex overflow-hidden justify-center"
+      class={`w-64 h-64 bg-green-100 rounded-full flex overflow-hidden justify-center ${isEven ? 'order-1' : 'order-1 lg:order-2'}`}
     >
       {
         imageUrl ? (
@@ -25,7 +28,9 @@ const { imageUrl, person, position, role, snsLinks, comment, other } =
         )
       }
     </div>
-    <div class="flex-1 text-center lg:text-right lg:ml-8">
+    <div
+      class={`flex-1 text-center ${isEven ? 'lg:text-right lg:ml-8 order-2' : 'lg:text-left order-2 lg:order-1 lg:mr-8'}`}
+    >
       <h3 class="text-2xl font-bold mb-2">{person}</h3>
       <p class="text-gray-600 mb-1">{position}</p>
       <p class="text-gray-600 mb-4">担当:{role}</p>
@@ -44,7 +49,7 @@ const { imageUrl, person, position, role, snsLinks, comment, other } =
         }
       </p>
       <p class="text-black-600 my-10" set:html={comment} />
-      <p class="text-black-600 my-10" set:html={other} />
+      {other && <p class="text-black-600 my-10" set:html={other} />}
     </div>
   </div>
 </div>
