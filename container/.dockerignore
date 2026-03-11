@@ -3,8 +3,7 @@ node_modules/
 npm-debug.log
 
 # ビルド成果物
-.next/
-out/
+dist/
 
 # バージョン管理システム
 .git/
