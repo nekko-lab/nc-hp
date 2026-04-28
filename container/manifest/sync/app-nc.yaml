@@ -3,15 +3,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nekko-cloud-deployment
+  namespace: nekko-cloud
+  labels:
+    app: nekko-cloud
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: app-nc
+      app: nekko-cloud
   template:
     metadata:
       labels:
-        app: app-nc
+        app: nekko-cloud
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/port: '9113'

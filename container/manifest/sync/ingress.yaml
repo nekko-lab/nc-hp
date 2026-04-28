@@ -3,6 +3,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nekko-cloud-ingress
+  namespace: nekko-cloud
+  labels:
+    app: nekko-cloud
 spec:
   ingressClassName: cloudflare-tunnel
   rules:

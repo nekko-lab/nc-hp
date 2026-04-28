@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-nc
+  namespace: nekko-cloud
+  labels:
+    app: nekko-cloud
+spec:
+  type: ClusterIP
+  selector:
+    app: nekko-cloud
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
