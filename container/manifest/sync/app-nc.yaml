@@ -1,0 +1,55 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nekko-cloud-deployment
+  namespace: nekko-cloud
+  labels:
+    app: nekko-cloud
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nekko-cloud
+  template:
+    metadata:
+      labels:
+        app: nekko-cloud
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '9113'
+        prometheus.io/path: '/metrics'
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      volumes:
+        - name: nginx-logs
+          emptyDir: {}
+      containers:
+        - name: nekko-cloud-container
+          image: "ghcr.io/nekko-lab/nekko_cloud.com:9117e67ad203e0105df7c740822072fa92430426" # ghcr.io/${{ github.repository }}:${{ github.sha }}
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: '2048Mi'
+              cpu: '4'
+            requests:
+              memory: '256Mi'
+              cpu: '250m'
+          volumeMounts:
+            - name: nginx-logs
+              mountPath: /var/log/nginx
+        - name: nginx-exporter
+          image: 'nginx/nginx-prometheus-exporter:1.5.1'
+          args:
+            - -nginx.scrape-uri=http://localhost:80/metrics
+          ports:
+            - containerPort: 9113
+              name: metrics
+          resources:
+            limits:
+              memory: '2048Mi'
+              cpu: '2'
+            requests:
+              memory: '64Mi'
+              cpu: '100m'
