@@ -19,15 +19,20 @@ jobs:
 
     env:
       REGISTRY: ghcr.io
-      IMAGE: 'ghcr.io/${{ github.repository }}:${{ github.sha }}' # サイトのイメージタグ
-
-    permissions:
-      contents: write
-      packages: write
+      IMAGE: 'ghcr.io/${{ github.repository }}:${{ github.sha }}'
 
     steps:
+      - name: Generate Token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
 
       - name: Generate Cloudflare IP List
         run: |
@@ -75,3 +80,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'ci(fire): Update image to ${{ github.sha }}'
+          token: ${{ steps.generate-token.outputs.token }}
