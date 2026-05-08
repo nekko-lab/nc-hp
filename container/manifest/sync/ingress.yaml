@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: cloudflare-tunnel
   rules:
-    - host: 'nekko-cloud.com'
+    - host: 'nc.nekko-lab.dev'
       http:
         paths:
           - path: /
