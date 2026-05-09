@@ -26,7 +26,7 @@ spec:
           emptyDir: {}
       containers:
         - name: nekko-cloud-container
-          image: "ghcr.io/nekko-lab/nc-hp:861cc01fed0f2b249879a9cd8943e539688bd1a1" # ghcr.io/${{ github.repository }}:${{ github.sha }}
+          image: "ghcr.io/nekko-lab/nc-hp:cdd1159730b58d387d6ecafe4b7435d563bebbe4" # ghcr.io/${{ github.repository }}:${{ github.sha }}
           imagePullPolicy: Always
           resources:
             limits:
